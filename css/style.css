@@ -66,4 +66,15 @@ a:hover {
   background-color: rgb(0, 121, 148);
 }
 
+.clear {
+  height: 1px;
+}
+
+.boxcenter {
+  width: 400px;
+  height: 400px;
+  margin: 20px auto 0px;
+  background-color: rgb(60, 254, 108);
+}
+
 /*# sourceMappingURL=style.css.map */

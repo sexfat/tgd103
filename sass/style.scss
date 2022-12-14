@@ -96,3 +96,26 @@ a {
      }
    } 
 }
+
+// mixin 樣式複用
+@mixin center($top , $bottom:0px){
+    margin: $top auto $bottom;
+}
+
+
+@mixin react($w , $h:$w){
+    width: $w;
+    height: $h;
+}
+
+.clear {
+    height: 1px;
+}
+
+.boxcenter {
+  @include react(400px);  
+  @include center(20px);
+  background-color: rgb(60, 254, 108);
+}
+
+
