@@ -12,17 +12,58 @@ body {
   margin: 10px 10px 10px 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 16px;
-  background-color: #78e0ff;
+  background-color: #f0f0f0;
 }
 body .wrapper {
   width: 100%;
   max-width: 1200px;
-  background-color: #333;
+  background-color: rgb(248, 248, 248);
   margin: 0 auto;
   height: auto;
 }
 body .wrapper h1 {
   font-size: 80px;
+}
+body .index .title {
+  color: aqua;
+}
+body .about .title {
+  color: bisque;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #333;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #fff;
+}
+.btn.default {
+  background-color: #001aff;
+}
+.btn.default:hover {
+  background-color: rgb(6, 0, 184);
+}
+.btn.error {
+  background-color: #f20;
+}
+.btn.error:hover {
+  background-color: rgb(156, 0, 8);
+}
+.btn.info {
+  background-color: #78e0ff;
+}
+.btn.info:hover {
+  background-color: rgb(0, 121, 148);
 }
 
 /*# sourceMappingURL=style.css.map */
