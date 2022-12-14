@@ -101,8 +101,6 @@ a {
 @mixin center($top , $bottom:0px){
     margin: $top auto $bottom;
 }
-
-
 @mixin react($w , $h:$w){
     width: $w;
     height: $h;
@@ -117,5 +115,38 @@ a {
   @include center(20px);
   background-color: rgb(60, 254, 108);
 }
+
+
+@mixin btn($size , $bgc , $color){
+   background-color: $bgc;
+   text-align: center;
+   width: $size;
+   padding: 10px;
+   font-size: 16px;
+   color: $color;
+   cursor: pointer;
+   &:hover {
+     background-color: darken($bgc, 10); 
+   }
+}
+
+
+
+.btn-default {
+  @include btn(100px, #f95300, rgb(0, 0, 0));
+  @include center(0px);
+}
+
+.btn-default-xl {
+    @include btn(300px, #00f100, rgb(0, 255, 238));
+    @include center(0px);
+    border-radius: 10px;
+  }
+
+  .btn-default-xxl {
+    @include btn(500px, #f1f900, rgb(255, 0, 234));
+    @include center(0px);
+  }
+
 
 

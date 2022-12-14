@@ -77,4 +77,47 @@ a:hover {
   background-color: rgb(60, 254, 108);
 }
 
+.btn-default {
+  background-color: #f95300;
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin: 0px auto 0px;
+}
+.btn-default:hover {
+  background-color: #c64200;
+}
+
+.btn-default-xl {
+  background-color: #00f100;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(0, 255, 238);
+  cursor: pointer;
+  margin: 0px auto 0px;
+  border-radius: 10px;
+}
+.btn-default-xl:hover {
+  background-color: #00be00;
+}
+
+.btn-default-xxl {
+  background-color: #f1f900;
+  text-align: center;
+  width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(255, 0, 234);
+  cursor: pointer;
+  margin: 0px auto 0px;
+}
+.btn-default-xxl:hover {
+  background-color: #c0c600;
+}
+
 /*# sourceMappingURL=style.css.map */
