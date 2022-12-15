@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $bgc: #f0f0f0; // background-color 顏色
 $font_base: 16px; // font size 數字
 $m: 10px 10px 10px 10px; //list 列表
@@ -232,8 +234,15 @@ section {
     color:rgb(255, 0, 234);
    }
 
-
-
 }
 
+
+//  sass 1.32之後的版本 除法 要用math.div( 分子 ,  分母)
+.default {
+ width:  10px + 10;
+ height:  100 - 10px;
+//  margin:  10px * 10;
+// font:  (100px / 10);
+ font :  math.div(100px , 20); //   除法比較特殊
+}
 

@@ -178,5 +178,10 @@ section {
     color: rgb(255, 0, 234);
   }
 }
+.default {
+  width: 20px;
+  height: 90px;
+  font: 5px;
+}
 
 /*# sourceMappingURL=style.css.map */
