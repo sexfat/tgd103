@@ -137,7 +137,7 @@ a:hover {
     margin: 0 auto;
   }
 }
-@media all and (max-width: 720px) {
+@media all and (max-width: 721px) {
   .wrapper_fixed {
     width: 100%;
   }
@@ -154,7 +154,7 @@ section {
     width: 100%;
   }
 }
-@media all and (max-width: 720px) {
+@media all and (max-width: 721px) {
   section {
     width: 100%;
   }
@@ -166,7 +166,7 @@ section {
     color: #f20;
   }
 }
-@media all and (max-width: 720px) {
+@media all and (max-width: 721px) {
   h1 {
     font-size: 70px;
     color: rgb(255, 0, 234);

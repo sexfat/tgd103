@@ -7,8 +7,18 @@ $color: (
   "primary": rgb(255, 255, 255),
   "secondary": rgb(248, 248, 248),
 ); // map
+//斷點
+
+$m_breakpoint :721px;
+$t_breakpoint : 1024px;
+
+
+
 /*css 註解*/
 //變數的權重
+
+
+
 
 .box {
   $top: 10px; //區域變數
@@ -152,14 +162,14 @@ a {
 }
 // 手機板 respond
 @mixin m() {
-  @media all and (max-width: 720px) {
+  @media all and (max-width: $m_breakpoint) {
     //手機板
     @content;
   }
 }
 
 @mixin t() {
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: $t_breakpoint) {
     //手機板
     @content;
   }
