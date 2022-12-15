@@ -5,6 +5,12 @@
 @import  "base/font";
 @import  "mixin/mixin";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// page
+@import "page/index";
+@import "page/about";
+
+
 /*css 註解*/
 //變數的權重
 
