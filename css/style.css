@@ -131,6 +131,12 @@ a:hover {
   width: 1200px;
   margin: 0 auto;
 }
+@media all and (max-width: 800px) {
+  .wrapper_fixed {
+    width: 66%;
+    margin: 0 auto;
+  }
+}
 @media all and (max-width: 1024px) {
   .wrapper_fixed {
     width: 80%;

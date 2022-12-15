@@ -161,18 +161,28 @@ a {
   }
 }
 // 手機板 respond
-@mixin m() {
+@mixin m {
   @media all and (max-width: $m_breakpoint) {
     //手機板
     @content;
   }
 }
 
-@mixin t() {
+@mixin t {
   @media all and (max-width: $t_breakpoint) {
     //手機板
     @content;
   }
+}
+
+
+@mixin r($breakpoint){
+  @media all and (max-width: $breakpoint) {
+    //自訂義斷點
+    @content;
+  }
+
+
 }
 
 
@@ -182,10 +192,14 @@ a {
 
 .wrapper_fixed {
   @include layout(1200px);
-  @include t(){
+  @include r(800px){
+    @include layout(66%);
+
+  }
+  @include t{
     @include layout(80%);
   }
-  @include m(){
+  @include m{
     @include layout(100%);
 }
 
@@ -194,15 +208,15 @@ section {
   @include layout(1200px);
   background-color: #003cff;
   min-height: 300px;
-  @include t(){
+  @include t{
     @include layout(100%);
   }
-  @include m(){
+  @include m{
       @include layout(100%);
   }
 }
 
-@include t(){
+@include t{
     h1 {
      font-size: 120px;
      color: #f20;
@@ -212,7 +226,7 @@ section {
 
 
 
-@include m(){
+@include m{
    h1 {
     font-size: 70px;
     color:rgb(255, 0, 234);
