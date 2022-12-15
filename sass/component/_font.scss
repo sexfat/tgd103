@@ -1,0 +1,7 @@
+@each $k , $v in $fontStyle {
+    #{$k} {
+     font-size: $v;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+   }
+   

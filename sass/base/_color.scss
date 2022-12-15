@@ -4,3 +4,12 @@ $color: (
 ); // map
 
 $bgc: #f0f0f0 !default; // background-color 顏色
+
+
+$colorStyle: (
+  "primary": blue,
+  "secondary": yellow,
+  "info": green,
+  "error": rgb(212, 68, 1),
+  "alert": #ff00ff,
+);

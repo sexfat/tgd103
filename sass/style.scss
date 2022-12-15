@@ -6,9 +6,12 @@
 @import "mixin/mixin";
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+// component 
 @import "component/push";
 @import "component/btn";
 @import "component/grid";
+@import "component/color";
+@import "component/font";
 
 // page
 @import "page/index";
@@ -202,21 +205,8 @@ $list: a1 a2 a3 a4; // list
 @include img(banner1, banner2, banner3, slide1, slide2);
 
 // map
-$colorStyle: (
-  "primary": blue,
-  "secondary": yellow,
-  "info": green,
-  "error": red,
-  "alert": #ff00ff,
-);
-//map
-@each $k, $v in $colorStyle {
-  @for $i from 1 through 10 {
-    .#{$k}-bg_#{$i} {
-      background-color: lighten($v , $i*5.2);
-    }
-    .#{$k}-text_#{$i} {
-      background-color: lighten($v , $i*5.2);
-    }
-  }
-}
+
+
+
+
+

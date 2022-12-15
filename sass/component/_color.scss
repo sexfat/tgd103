@@ -1,0 +1,12 @@
+//map
+@each $k, $v in $colorStyle {
+    @for $i from 1 through 10 {
+      .#{$k}-bg_#{$i} {
+        background-color: lighten($v , $i * 4.8);
+      }
+      .#{$k}-text_#{$i} {
+        background-color: lighten($v , $i* 4.8);
+      }
+    }
+  }
+  
