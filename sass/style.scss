@@ -205,13 +205,18 @@ $list: a1 a2 a3 a4; // list
 $colorStyle: (
   "primary": blue,
   "secondary": yellow,
-  "info" : green,
-  "error" : red,
-  "alert" : #ff00ff
+  "info": green,
+  "error": red,
+  "alert": #ff00ff,
 );
 //map
 @each $k, $v in $colorStyle {
-  .#{$k}-bg {
-    background-color: $v;
+  @for $i from 1 through 10 {
+    .#{$k}-bg_#{$i} {
+      background-color: lighten($v , $i*4);
+    }
+    .#{$k}-text_#{$i} {
+      background-color: lighten($v , $i*4);
+    }
   }
 }
