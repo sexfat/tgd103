@@ -228,7 +228,7 @@ section {
     color: rgb(255, 0, 234);
   }
 }
-.default {
+.defaults {
   width: 20px;
   height: 90px;
   font: 5px;

@@ -162,7 +162,7 @@ section {
 }
 
 //  sass 1.32之後的版本 除法 要用math.div( 分子 ,  分母)
-.default {
+.defaults {
   width: 10px + 10;
   height: 100 - 10px;
   //  margin:  10px * 10;
@@ -182,16 +182,21 @@ section {
   }
 }
 
-@mixin space($dis,$num) {
+// 物件距離
+// @include space(top方向 , 200數量)
+@mixin space($dis, $num , $style:true) {
   @for $i from 1 through $num {
-    .#{$dis}_#{$i} {
-      position: relative;
-      #{$dis}: $i * 1px;
+      .#{$dis}_#{$i} {
+      @if $style {
+        position: relative;
+        #{$dis}: $i * 1px;
+      }@else {
+        margin-#{$dis}: $i * 1px 
     }
+    } 
   }
 }
 
-
-@include space(top , 200);
-@include space(left , 200);
-@include space(right , 200);
+@include space(top, 200 );
+@include space(left, 200);
+@include space(right, 200);
