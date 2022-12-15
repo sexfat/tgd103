@@ -8,13 +8,6 @@ $color: (
   "secondary": rgb(248, 248, 248),
 ); // map
 /*css 註解*/
-
-body {
-}
-
-.wrapper {
-}
-
 //變數的權重
 
 .box {
@@ -61,94 +54,162 @@ body {
   }
 }
 
-
 a {
   color: #000;
-  text-decoration:none;
+  text-decoration: none;
   &:hover {
     color: #333;
   }
 }
 
 .btn {
-   padding: 10px 20px;
-   text-align: center;
-   font-size: 14px;
-   cursor: pointer;
-   border-radius: 20px;
-   color: #fff;
-   &.default {
-     background-color: #001aff;
-     &:hover {
-        background-color: rgb(6, 0, 184);
-     }
-   }
-   &.error {
-      background-color: #f20;
-      &:hover {
-        background-color: rgb(156, 0, 8);
-     }
-   }
-   &.info {
-     background-color: #78e0ff;
-     &:hover {
-        background-color: rgb(0, 121, 148);
-     }
-   } 
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #fff;
+  &.default {
+    background-color: #001aff;
+    &:hover {
+      background-color: rgb(6, 0, 184);
+    }
+  }
+  &.error {
+    background-color: #f20;
+    &:hover {
+      background-color: rgb(156, 0, 8);
+    }
+  }
+  &.info {
+    background-color: #78e0ff;
+    &:hover {
+      background-color: rgb(0, 121, 148);
+    }
+  }
 }
 
 // mixin 樣式複用
-@mixin center($top , $bottom:0px){
-    margin: $top auto $bottom;
+@mixin center($top, $bottom: 0px) {
+  margin: $top auto $bottom;
 }
-@mixin react($w , $h:$w){
-    width: $w;
-    height: $h;
+@mixin react($w, $h: $w) {
+  width: $w;
+  height: $h;
 }
 
 .clear {
-    height: 1px;
+  height: 1px;
 }
 
 .boxcenter {
-  @include react(400px);  
+  @include react(400px);
   @include center(20px);
   background-color: rgb(60, 254, 108);
 }
 
+@mixin btn($size, $bgc, $color, $borderRadius: null) {
+  background-color: $bgc;
+  text-align: center;
+  width: $size;
+  padding: 10px;
+  font-size: 20px;
+  color: $color;
+  cursor: pointer;
+  border-radius: $borderRadius;
+  transition: 0.2 all ease-in-out;
 
-
-@mixin btn($size , $bgc , $color ,$borderRadius:null){
-   background-color: $bgc;
-   text-align: center;
-   width: $size;
-   padding: 10px;
-   font-size: 16px;
-   color: $color;
-   cursor: pointer;
-   border-radius: $borderRadius;
-
-   &:hover {
-     background-color: darken($bgc, 10); 
-   }
+  &:hover {
+    background-color: darken($bgc, 10);
+  }
 }
 
-
-
 .btn-default {
-  @include btn(100px, #f95300, #000000 , 10px);
+  @include btn(100px, #f95300, #000000, 10px);
   @include center(0px);
 }
 
 .btn-default-xl {
-    @include btn(300px, #00f100, #00ffee);
-    @include center(0px);
-  }
+  @include btn(300px, #00f100, #00ffee);
+  @include center(0px);
+}
 
-  .btn-default-xxl {
-    @include btn(500px, #f1f900, rgb(255, 0, 234));
-    @include center(0px);
-  }
+.btn-default-xxl {
+  @include btn(500px, #f1f900, rgb(255, 0, 234));
+  @include center(0px);
+}
 
+// ============= layout 使用 ==========//
+// @include layout(寬度)
+// 寬度給100% 就是滿版
+@mixin layout($style) {
+  @if $style == 100% {
+    width: 100%;
+  } @else {
+    width: $style;
+    margin: 0 auto;
+  }
+}
+// 手機板 respond
+@mixin m() {
+  @media all and (max-width: 720px) {
+    //手機板
+    @content;
+  }
+}
+
+@mixin t() {
+  @media all and (max-width: 1024px) {
+    //手機板
+    @content;
+  }
+}
+
+
+.wrapper_full {
+  @include layout(100%);
+}
+
+.wrapper_fixed {
+  @include layout(1200px);
+  @include t(){
+    @include layout(80%);
+  }
+  @include m(){
+    @include layout(100%);
+}
+
+}
+section {
+  @include layout(1200px);
+  background-color: #003cff;
+  min-height: 300px;
+  @include t(){
+    @include layout(100%);
+  }
+  @include m(){
+      @include layout(100%);
+  }
+}
+
+@include t(){
+    h1 {
+     font-size: 120px;
+     color: #f20;
+    }
+
+}
+
+
+
+@include m(){
+   h1 {
+    font-size: 70px;
+    color:rgb(255, 0, 234);
+   }
+
+
+
+}
 
 

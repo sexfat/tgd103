@@ -82,10 +82,11 @@ a:hover {
   text-align: center;
   width: 100px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   color: #000000;
   cursor: pointer;
   border-radius: 10px;
+  transition: 0.2 all ease-in-out;
   margin: 0px auto 0px;
 }
 .btn-default:hover {
@@ -97,9 +98,10 @@ a:hover {
   text-align: center;
   width: 300px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   color: #00ffee;
   cursor: pointer;
+  transition: 0.2 all ease-in-out;
   margin: 0px auto 0px;
 }
 .btn-default-xl:hover {
@@ -111,13 +113,64 @@ a:hover {
   text-align: center;
   width: 500px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   color: rgb(255, 0, 234);
   cursor: pointer;
+  transition: 0.2 all ease-in-out;
   margin: 0px auto 0px;
 }
 .btn-default-xxl:hover {
   background-color: #c0c600;
+}
+
+.wrapper_full {
+  width: 100%;
+}
+
+.wrapper_fixed {
+  width: 1200px;
+  margin: 0 auto;
+}
+@media all and (max-width: 1024px) {
+  .wrapper_fixed {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 720px) {
+  .wrapper_fixed {
+    width: 100%;
+  }
+}
+
+section {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #003cff;
+  min-height: 300px;
+}
+@media all and (max-width: 1024px) {
+  section {
+    width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  section {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  h1 {
+    font-size: 120px;
+    color: #f20;
+  }
+}
+@media all and (max-width: 720px) {
+  h1 {
+    font-size: 70px;
+    color: rgb(255, 0, 234);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
