@@ -11,7 +11,7 @@ marginBottom {
 body {
   margin: 10px 10px 10px 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   background-color: #f0f0f0;
 }
 body .wrapper {
@@ -22,7 +22,7 @@ body .wrapper {
   height: auto;
 }
 body .wrapper h1 {
-  font-size: 80px;
+  font-size: 70px;
 }
 body .index .title {
   color: aqua;
@@ -182,6 +182,30 @@ section {
   width: 20px;
   height: 90px;
   font: 5px;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+h3 {
+  font-size: 50px;
+}
+
+h4 {
+  font-size: 39px;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+h6 {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
