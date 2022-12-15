@@ -251,3 +251,23 @@ section {
 }
 
 @include title($fontBase);
+
+
+@mixin font($size:medium){ 
+  @if $size == bold { 
+    font-size: 40px;
+    font-weight: bold;
+  }@else if $size  == medium {
+    font-size: 20px;
+    font-weight: 400;
+  }@else if $size == light {
+    font-size: 16px;
+    font-weight: 100;
+  }
+}
+
+.text {
+   @include font(bold);
+}
+
+
