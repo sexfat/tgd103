@@ -3551,4 +3551,54 @@ h6 {
   margin: 10px;
 }
 
+.img_banner1 {
+  background-image: url("assets/images/banner1.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.img_banner2 {
+  background-image: url("assets/images/banner2.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.img_banner3 {
+  background-image: url("assets/images/banner3.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.img_slide1 {
+  background-image: url("assets/images/slide1.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.img_slide2 {
+  background-image: url("assets/images/slide2.jpg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.primary-bg {
+  background-color: blue;
+}
+
+.secondary-bg {
+  background-color: yellow;
+}
+
+.info-bg {
+  background-color: green;
+}
+
+.error-bg {
+  background-color: red;
+}
+
+.alert-bg {
+  background-color: #ff00ff;
+}
+
 /*# sourceMappingURL=style.css.map */

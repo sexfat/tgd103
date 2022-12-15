@@ -186,6 +186,32 @@ section {
   }
 }
 
+//each
+$list: a1 a2 a3 a4; // list
 
+@mixin img($list...) {
+  @each $key in $list {
+    .img_#{$key} {
+      background-image: url("assets/images/#{$key}.jpg");
+      background-repeat: no-repeat;
+      object-fit: cover;
+    }
+  }
+}
 
+@include img(banner1, banner2, banner3, slide1, slide2);
 
+// map
+$colorStyle: (
+  "primary": blue,
+  "secondary": yellow,
+  "info" : green,
+  "error" : red,
+  "alert" : #ff00ff
+);
+//map
+@each $k, $v in $colorStyle {
+  .#{$k}-bg {
+    background-color: $v;
+  }
+}
