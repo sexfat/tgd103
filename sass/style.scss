@@ -13,6 +13,12 @@
 @import "component/color";
 @import "component/font";
 
+// layout
+
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/footer';
+
 // page
 @import "page/index";
 @import "page/about";
