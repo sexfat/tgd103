@@ -83,8 +83,9 @@ a:hover {
   width: 100px;
   padding: 10px;
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   cursor: pointer;
+  border-radius: 10px;
   margin: 0px auto 0px;
 }
 .btn-default:hover {
@@ -97,10 +98,9 @@ a:hover {
   width: 300px;
   padding: 10px;
   font-size: 16px;
-  color: rgb(0, 255, 238);
+  color: #00ffee;
   cursor: pointer;
   margin: 0px auto 0px;
-  border-radius: 10px;
 }
 .btn-default-xl:hover {
   background-color: #00be00;

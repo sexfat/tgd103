@@ -117,7 +117,8 @@ a {
 }
 
 
-@mixin btn($size , $bgc , $color){
+
+@mixin btn($size , $bgc , $color ,$borderRadius:null){
    background-color: $bgc;
    text-align: center;
    width: $size;
@@ -125,6 +126,8 @@ a {
    font-size: 16px;
    color: $color;
    cursor: pointer;
+   border-radius: $borderRadius;
+
    &:hover {
      background-color: darken($bgc, 10); 
    }
@@ -133,14 +136,13 @@ a {
 
 
 .btn-default {
-  @include btn(100px, #f95300, rgb(0, 0, 0));
+  @include btn(100px, #f95300, #000000 , 10px);
   @include center(0px);
 }
 
 .btn-default-xl {
-    @include btn(300px, #00f100, rgb(0, 255, 238));
+    @include btn(300px, #00f100, #00ffee);
     @include center(0px);
-    border-radius: 10px;
   }
 
   .btn-default-xxl {
