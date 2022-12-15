@@ -1,15 +1,14 @@
 @use "sass:math";
-@import  "base/reset";
-@import  "base/color";
-@import  "base/breakpoint";
-@import  "base/font";
-@import  "mixin/mixin";
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "base/reset";
+@import "base/color";
+@import "base/breakpoint";
+@import "base/font";
+@import "mixin/mixin";
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // page
 @import "page/index";
 @import "page/about";
-
 
 /*css 註解*/
 //變數的權重
@@ -95,7 +94,6 @@ a {
   }
 }
 
-
 .clear {
   height: 1px;
 }
@@ -105,7 +103,6 @@ a {
   @include center(20px);
   background-color: rgb(60, 254, 108);
 }
-
 
 .btn-default {
   @include btn(100px, #f95300, #000000, 10px);
@@ -121,9 +118,6 @@ a {
   @include btn(500px, #f1f900, rgb(255, 0, 234));
   @include center(0px);
 }
-
-
-
 
 .wrapper_full {
   @include layout(100%);
@@ -176,14 +170,28 @@ section {
   font: math.div(100, 20) + px// 除法比較特殊;
 }
 
-
 @include title($fontBase);
 
-
-
-
 .text {
-   @include font(bold);
+  @include font(bold);
+}
+
+@for $i from 1 through 10 {
+  .a#{$i} {
+    margin: $i * 1px;
+  }
+}
+
+@mixin space($dis,$num) {
+  @for $i from 1 through $num {
+    .#{$dis}_#{$i} {
+      position: relative;
+      #{$dis}: $i * 1px;
+    }
+  }
 }
 
 
+@include space(top , 200);
+@include space(left , 200);
+@include space(right , 200);
