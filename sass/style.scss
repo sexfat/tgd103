@@ -6,6 +6,10 @@
 @import "mixin/mixin";
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+@import "component/push";
+@import "component/btn";
+@import "component/grid";
+
 // page
 @import "page/index";
 @import "page/about";
@@ -182,21 +186,6 @@ section {
   }
 }
 
-// 物件距離
-// @include space(top方向 , 200數量)
-@mixin space($dis, $num , $style:true) {
-  @for $i from 1 through $num {
-      .#{$dis}_#{$i} {
-      @if $style {
-        position: relative;
-        #{$dis}: $i * 1px;
-      }@else {
-        margin-#{$dis}: $i * 1px 
-    }
-    } 
-  }
-}
 
-@include space(top, 200 );
-@include space(left, 200);
-@include space(right, 200);
+
+

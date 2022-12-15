@@ -99,3 +99,29 @@
       font-weight: 100;
     }
   } 
+
+
+  // 物件距離
+// @include space(top方向 , 200數量)
+@mixin space($dis, $num , $style:true) {
+    @for $i from 1 through $num {
+        .#{$dis}_#{$i} {
+        @if $style {
+          position: relative;
+          #{$dis}: $i * 1px;
+        }@else {
+          margin-#{$dis}: $i * 1px 
+      }
+      } 
+    }
+  }
+
+// 格線系統
+  @mixin grid($num, $style: null) {
+    @for $i from 1 through $num {
+      .col-#{$style}#{$i} {
+        width: math.div($i, $num) * 100%;
+      }
+    }
+  }
+
