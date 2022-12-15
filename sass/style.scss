@@ -213,10 +213,10 @@ $colorStyle: (
 @each $k, $v in $colorStyle {
   @for $i from 1 through 10 {
     .#{$k}-bg_#{$i} {
-      background-color: lighten($v , $i*4);
+      background-color: lighten($v , $i*5.2);
     }
     .#{$k}-text_#{$i} {
-      background-color: lighten($v , $i*4);
+      background-color: lighten($v , $i*5.2);
     }
   }
 }
