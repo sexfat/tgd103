@@ -1,19 +1,10 @@
 @use "sass:math";
-
-$bgc: #f0f0f0; // background-color 顏色
-$fontBase: 14px; // font size 數字
-$m: 10px 10px 10px 10px; //list 列表
-$fontFamily: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; // 字串
-$null: null;
-$color: (
-  "primary": rgb(255, 255, 255),
-  "secondary": rgb(248, 248, 248),
-); // map
-//斷點
-
-$m_breakpoint: 721px;
-$t_breakpoint: 1024px;
-
+@import  "base/reset";
+@import  "base/color";
+@import  "base/breakpoint";
+@import  "base/font";
+@import  "mixin/mixin";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 /*css 註解*/
 //變數的權重
 
@@ -24,6 +15,8 @@ $t_breakpoint: 1024px;
 // 改變權重
 $bottom: 20px;
 $bottom: 40px !default;
+
+$bgc: #b4dcff; // background-color 顏色
 
 $class: marginBottom;
 #{$class} {
@@ -96,14 +89,6 @@ a {
   }
 }
 
-// mixin 樣式複用
-@mixin center($top, $bottom: 0px) {
-  margin: $top auto $bottom;
-}
-@mixin react($w, $h: $w) {
-  width: $w;
-  height: $h;
-}
 
 .clear {
   height: 1px;
@@ -115,21 +100,6 @@ a {
   background-color: rgb(60, 254, 108);
 }
 
-@mixin btn($size, $bgc, $color, $borderRadius: null) {
-  background-color: $bgc;
-  text-align: center;
-  width: $size;
-  padding: 10px;
-  font-size: 20px;
-  color: $color;
-  cursor: pointer;
-  border-radius: $borderRadius;
-  transition: 0.2 all ease-in-out;
-
-  &:hover {
-    background-color: darken($bgc, 10);
-  }
-}
 
 .btn-default {
   @include btn(100px, #f95300, #000000, 10px);
@@ -146,38 +116,8 @@ a {
   @include center(0px);
 }
 
-// ============= layout 使用 ==========//
-// @include layout(寬度)
-// 寬度給100% 就是滿版
-@mixin layout($style) {
-  @if $style == 100% {
-    width: 100%;
-  } @else {
-    width: $style;
-    margin: 0 auto;
-  }
-}
-// 手機板 respond
-@mixin m {
-  @media all and (max-width: $m_breakpoint) {
-    //手機板
-    @content;
-  }
-}
 
-@mixin t {
-  @media all and (max-width: $t_breakpoint) {
-    //手機板
-    @content;
-  }
-}
 
-@mixin r($breakpoint) {
-  @media all and (max-width: $breakpoint) {
-    //自訂義斷點
-    @content;
-  }
-}
 
 .wrapper_full {
   @include layout(100%);
@@ -229,42 +169,12 @@ section {
   // font:  (100px / 10);
   font: math.div(100, 20) + px// 除法比較特殊;
 }
-@mixin title($fontBase) {
-  h1 {
-    font-size: round($fontBase * 5);
-  }
-  h2 {
-    font-size: round($fontBase * 4);
-  }
-  h3 {
-    font-size: round($fontBase * 3.6);
-  }
-  h4 {
-    font-size: round($fontBase * 2.8);
-  }
-  h5 {
-    font-size: round($fontBase * 1.2);
-  }
-  h6 {
-    font-size: round($fontBase * 1);
-  }
-}
+
 
 @include title($fontBase);
 
 
-@mixin font($size:medium){ 
-  @if $size == bold { 
-    font-size: 40px;
-    font-weight: bold;
-  }@else if $size  == medium {
-    font-size: 20px;
-    font-weight: 400;
-  }@else if $size == light {
-    font-size: 16px;
-    font-weight: 100;
-  }
-}
+
 
 .text {
    @include font(bold);
