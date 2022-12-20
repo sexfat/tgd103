@@ -4,7 +4,9 @@
   "description": "tgd103 前端工具",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css 編譯": "gulp style",
+    "css 壓縮": "gulp styleMini"
   },
   "repository": {
     "type": "git",

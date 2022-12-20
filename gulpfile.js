@@ -78,14 +78,27 @@ exports.js = jsmini;
 // sass complier
 const sass = require('gulp-sass')(require('sass'));
 
+// 沒壓縮css 
 function sassStyle(){
  return src('src/sass/*.scss')
- .pipe(sass.sync().on('error', sass.logError))
- .pipe(cleanCSS())
- .pipe(dest('dist/css'))
+ .pipe(sass.sync().on('error', sass.logError)) // sass ->css
+ .pipe(dest('dist/css')) 
 }
 
+// 有壓縮
+function sassStyleMini(){
+    return src('src/sass/*.scss')
+    .pipe(sass.sync().on('error', sass.logError)) // sass ->css
+    .pipe(cleanCSS())// minify css
+    .pipe(rename({
+       extname: '.min.css'
+     }))
+    .pipe(dest('dist/css')) 
+   }
+
+
 exports.style = sassStyle
+exports.styleMini = sassStyleMini
 
 
 
