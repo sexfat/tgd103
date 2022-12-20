@@ -1,0 +1,23 @@
+{
+  "name": "tgd103",
+  "version": "1.0.0",
+  "description": "tgd103 前端工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sexfat/tgd103.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sexfat/tgd103/issues"
+  },
+  "homepage": "https://github.com/sexfat/tgd103#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
