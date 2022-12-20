@@ -46,6 +46,14 @@ exports.sync = parallel(TaskC , TaskD);
 
 exports.all = series(TaskA, TaskB , parallel(TaskC , TaskD) , TaskE)
 
+// src dest
+
+function move(){
+  return src('src/index.html').pipe(dest('dist'));
+}
+
+exports.m = move;
+
 
 
 
