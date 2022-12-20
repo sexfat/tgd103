@@ -145,14 +145,9 @@ function browser(done) {
     done();
 }
 
+//開發用
 exports.default = browser;
 
-
-
-
-
-//監看
-exports.w = watchfile
 
 // 打包上線用
 exports.package = parallel(html ,sassStyleMini , jsmini , img)

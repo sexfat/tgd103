@@ -6,7 +6,8 @@
   "scripts": {
     "scss 編譯": "gulp style",
     "css 壓縮": "gulp styleMini",
-    "打包所有資源": "gulp package"
+    "打包所有資源": "gulp package",
+    "開發用": "gulp"
   },
   "repository": {
     "type": "git",
