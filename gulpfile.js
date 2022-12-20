@@ -108,3 +108,11 @@ exports.template = html
 
 
 exports.do = defaultTask;
+
+function watchfile(){
+  watch(['src/*.html' , 'src/layout/*.html'] ,html)
+  watch(['src/sass/*.style' , 'src/sass/**/*.scss'] ,sassStyle)
+}
+
+exports.w = watchfile
+
