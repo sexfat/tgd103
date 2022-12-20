@@ -59,7 +59,7 @@ exports.cssm = cssminify;
 
 // js minify
 function jsmini() {
-  return src("src/js/main.js").pipe(uglify()).pipe(dest("dist/js"));
+  return src("src/js/*.js").pipe(uglify()).pipe(dest("dist/js"));
 }
 
 exports.js = jsmini;
@@ -107,12 +107,25 @@ function html() {
 exports.template = html
 
 
+// 打包圖片
+function img(){
+   return src('src/images/*.*').pipe(dest('dist/images'))
+}
+
+
+
+
 exports.do = defaultTask;
 
+
+// 監看所有變動
 function watchfile(){
   watch(['src/*.html' , 'src/layout/*.html'] ,html)
   watch(['src/sass/*.style' , 'src/sass/**/*.scss'] ,sassStyle)
+  watch('src/js/*.js' , jsmini)
+  watch(['src/images/*.*', 'src/images/**/*.*'] , img)
 }
 
 exports.w = watchfile
 
+exports.package = parallel(html ,sassStyleMini , jsmini , img)
