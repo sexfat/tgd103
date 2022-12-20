@@ -4,8 +4,7 @@
   "description": "tgd103 前端工具",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "css 編譯": "gulp style",
+    "scss 編譯": "gulp style",
     "css 壓縮": "gulp styleMini"
   },
   "repository": {
@@ -22,6 +21,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
