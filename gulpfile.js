@@ -81,6 +81,7 @@ const sass = require('gulp-sass')(require('sass'));
 function sassStyle(){
  return src('src/sass/*.scss')
  .pipe(sass.sync().on('error', sass.logError))
+ .pipe(cleanCSS())
  .pipe(dest('dist/css'))
 }
 
