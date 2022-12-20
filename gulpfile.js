@@ -126,6 +126,8 @@ function watchfile(){
   watch(['src/images/*.*', 'src/images/**/*.*'] , img)
 }
 
+//監看
 exports.w = watchfile
 
+// 打包上線用
 exports.package = parallel(html ,sassStyleMini , jsmini , img)
