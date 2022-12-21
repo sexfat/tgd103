@@ -123,7 +123,6 @@ exports.minifyimg = imgmini;
 
 
 
-exports.do = defaultTask;
 
 
 // 監看所有變動
