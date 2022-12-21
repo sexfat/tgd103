@@ -204,4 +204,4 @@ exports.default = series(parallel(html , sassStyle ,jsmini , img) , browser);
 
 
 // 打包上線用
-exports.package = series( clear,parallel(html ,sassStyleMini , babel5 , imgmini))
+exports.package = series(clear,parallel(html ,sassStyleMini , babel5 , imgmini))

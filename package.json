@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "scss 編譯": "gulp style",
-    "css 壓縮": "gulp styleMini",
-    "打包所有資源": "gulp package",
+    "scss編譯 + 壓縮": "gulp styleMini",
+    "上線用": "gulp package",
     "開發用": "gulp"
   },
   "repository": {
