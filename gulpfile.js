@@ -3,68 +3,29 @@ const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const clean = require('gulp-clean');
+const uglify = require("gulp-uglify");
+const rename = require("gulp-rename");
+const cleanCSS = require("gulp-clean-css");
+const babel = require('gulp-babel');
+const sass = require("gulp-sass")(require("sass"));
+const fileinclude = require("gulp-file-include");
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
 
-function defaultTask(cb) {
-  console.log("gulp 4 成功");
-  cb();
-}
-
-function TaskA(cb) {
-  console.log("A");
-  cb();
-}
-
-function TaskB(cb) {
-  console.log("B");
-  cb();
-}
-
-function TaskC(cb) {
-  console.log("C");
-  cb();
-}
-
-function TaskD(cb) {
-  console.log("D");
-  cb();
-}
-
-function TaskE(cb) {
-  console.log("E");
-  cb();
-}
-
-// a -> b
-exports.async = series(TaskA, TaskB);
-
-// c , d  -> finish
-exports.sync = parallel(TaskC, TaskD);
-
-exports.all = series(TaskA, TaskB, parallel(TaskC, TaskD), TaskE);
-
-// src -> dest
-
-
-
-
+//搬家語法
 function move() {
   return src("src/index.html").pipe(dest("dist"));
 }
-
 exports.m = move;
 
+
+// 清除舊檔案
 function clear() {
   return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
   .pipe(clean({force: true})); //強制刪除檔案 
 }
 
 exports.c = clear
-
-
-
-const uglify = require("gulp-uglify");
-const rename = require("gulp-rename");
-const cleanCSS = require("gulp-clean-css");
 
 //  css minify
 function cssminify() {
@@ -73,14 +34,13 @@ function cssminify() {
 
 exports.cssm = cssminify;
 
+
 // js minify
 function jsmini() {
   return src("src/js/*.js").pipe(uglify()).pipe(dest("dist/js"));
 }
 
 // js es6 -> es5
-const babel = require('gulp-babel');
-
 function babel5() {
     return src('src/js/*.js')
         .pipe(babel({
@@ -91,16 +51,10 @@ function babel5() {
 }
 
 exports.es5 = babel5;
-
-
-
-
-
 exports.js = jsmini;
 
-// sass complier
-const sass = require("gulp-sass")(require("sass"));
 
+// sass complier
 // 沒壓縮css
 function sassStyle() {
   return src("src/sass/*.scss")
@@ -134,9 +88,8 @@ function sassStyleMini() {
 exports.style = sassStyle;
 exports.styleMini = sassStyleMini;
 
-// html template
-const fileinclude = require("gulp-file-include");
 
+// html template
 function html() {
   return src("src/*.html")
     .pipe(
@@ -156,6 +109,7 @@ function img(){
    return src('src/images/*.*').pipe(dest('dist/images'))
 }
 
+//圖片壓縮
 function imgmini(){
   return src(['src/images/**/**/*.*' ,'src/images/*.*'])
   .pipe(imagemin([
@@ -180,10 +134,8 @@ function watchfile(){
   watch(['src/images/*.*', 'src/images/**/*.*'] , img)
 }
 
-const browserSync = require('browser-sync');
-const reload = browserSync.reload;
 
-
+//瀏覽器同步
 function browser(done) {
     browserSync.init({
         server: {
