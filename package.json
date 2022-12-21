@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/sexfat/tgd103#readme",
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
     "browser-sync": "^2.27.11",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",

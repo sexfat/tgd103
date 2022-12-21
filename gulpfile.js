@@ -65,6 +65,23 @@ function jsmini() {
   return src("src/js/*.js").pipe(uglify()).pipe(dest("dist/js"));
 }
 
+// js es6 -> es5
+const babel = require('gulp-babel');
+
+function babel5() {
+    return src('src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dist/js'));
+}
+
+exports.es5 = babel5;
+
+
+
+
+
 exports.js = jsmini;
 
 // sass complier
@@ -126,11 +143,11 @@ function img(){
 }
 
 function imgmini(){
-  return src('src/images/*.*')
+  return src(['src/images/**/**/*.*' ,'src/images/*.*'])
   .pipe(imagemin([
-    imagemin.mozjpeg({quality: 100, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+    imagemin.mozjpeg({quality: 80, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
 ]))
-  .pipe(dest('dist/images/mini'))
+  .pipe(dest('dist/images/mini/'))
 }
 
 exports.minifyimg = imgmini;
