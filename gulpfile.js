@@ -1,4 +1,5 @@
 const { src, dest, series, parallel, watch } = require("gulp");
+const autoprefixer = require('gulp-autoprefixer');
 
 function defaultTask(cb) {
   console.log("gulp 4 成功");
@@ -71,6 +72,9 @@ const sass = require("gulp-sass")(require("sass"));
 function sassStyle() {
   return src("src/sass/*.scss")
     .pipe(sass.sync().on("error", sass.logError)) // sass ->css
+    .pipe(autoprefixer({
+      cascade: false
+  }))
     .pipe(dest("dist/css"));
 }
 
@@ -79,6 +83,9 @@ function sassStyleMini() {
   return src("src/sass/*.scss")
     .pipe(sass.sync().on("error", sass.logError)) // sass ->css
     .pipe(cleanCSS()) // minify css
+    .pipe(autoprefixer({
+      cascade: false
+     }))
     .pipe(
       rename({
         extname: ".min.css",
