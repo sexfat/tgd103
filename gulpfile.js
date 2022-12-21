@@ -2,6 +2,7 @@ const { src, dest, series, parallel, watch } = require("gulp");
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
+const clean = require('gulp-clean');
 
 function defaultTask(cb) {
   console.log("gulp 4 成功");
@@ -43,11 +44,23 @@ exports.all = series(TaskA, TaskB, parallel(TaskC, TaskD), TaskE);
 
 // src -> dest
 
+
+
+
 function move() {
   return src("src/index.html").pipe(dest("dist"));
 }
 
 exports.m = move;
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+
+exports.c = clear
+
+
 
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
@@ -73,6 +86,7 @@ function babel5() {
         .pipe(babel({
             presets: ['@babel/env']
         }))
+        .pipe(uglify())
         .pipe(dest('dist/js'));
 }
 
@@ -186,8 +200,8 @@ function browser(done) {
 }
 
 //開發用
-exports.default = browser;
+exports.default = series(parallel(html , sassStyle ,jsmini , img) , browser);
 
 
 // 打包上線用
-exports.package = parallel(html ,sassStyleMini , jsmini , img)
+exports.package = series( clear,parallel(html ,sassStyleMini , babel5 , imgmini))
