@@ -1,5 +1,7 @@
 const { src, dest, series, parallel, watch } = require("gulp");
 const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
 
 function defaultTask(cb) {
   console.log("gulp 4 成功");
@@ -71,7 +73,9 @@ const sass = require("gulp-sass")(require("sass"));
 // 沒壓縮css
 function sassStyle() {
   return src("src/sass/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass.sync().on("error", sass.logError)) // sass ->css
+    .pipe(sourcemaps.write())
     .pipe(autoprefixer({
       cascade: false
   }))
@@ -81,7 +85,9 @@ function sassStyle() {
 // 有壓縮
 function sassStyleMini() {
   return src("src/sass/*.scss")
-    .pipe(sass.sync().on("error", sass.logError)) // sass ->css
+  .pipe(sourcemaps.init())
+  .pipe(sass.sync().on("error", sass.logError)) // sass ->css
+  .pipe(sourcemaps.write())
     .pipe(cleanCSS()) // minify css
     .pipe(autoprefixer({
       cascade: false
@@ -118,6 +124,16 @@ exports.template = html
 function img(){
    return src('src/images/*.*').pipe(dest('dist/images'))
 }
+
+function imgmini(){
+  return src('src/images/*.*')
+  .pipe(imagemin([
+    imagemin.mozjpeg({quality: 100, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+]))
+  .pipe(dest('dist/images/mini'))
+}
+
+exports.minifyimg = imgmini;
 
 
 
