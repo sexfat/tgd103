@@ -1,0 +1,17 @@
+.wrapper {
+   width:  1200px;
+   background-color: rgb(255, 235, 235);
+   margin: auto;
+}
+
+h1 { 
+
+ font-size: 30px;
+ color: rgb(0, 0, 0);
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(255, 0, 247);
+  }

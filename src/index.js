@@ -16,7 +16,8 @@ gsap.to('.box' , {
    yoyo: true
 })
 
-
+// css style 引入
+import './css/style.css'
 
 
 
@@ -24,6 +25,11 @@ gsap.to('.box' , {
 function aa(x){
   return  x * 10 
 }
+
+
+
+
+
 
 console.log(aa(20));
 console.log('finish');
