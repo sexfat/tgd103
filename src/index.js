@@ -1,8 +1,9 @@
+// jquery 套件引入
 import $ from 'jquery';
 $('body').css('background-color' , 'yellow');
 
 
-//gsap 
+//gsap  套件引入
 import { gsap } from "gsap";
 
 gsap.to('.box' , {
