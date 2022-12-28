@@ -1,6 +1,6 @@
 // jquery 套件引入
-import $ from 'jquery';
-$('body').css('background-color' , '#f20');
+// import $ from 'jquery';
+$('body').css('background-color' , '#333');
 
 
 //gsap  套件引入
@@ -11,7 +11,7 @@ gsap.to('.box' , {
    y: 400,
    duration: 1,
    rotation : 360,
-   repeat : -1,
+   repeat : 1,
    scale : 10,
    yoyo: true,
    backgroundColor : '#000'
@@ -31,13 +31,18 @@ function aa(x){
   return  x * 10 
 }
 
-
-
-
-
-
 console.log(aa(20));
 console.log('finish');
 
+
+import { createApp } from 'vue'
+
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+}).mount('#app')
 
 

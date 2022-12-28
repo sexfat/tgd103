@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "安裝套件": "npm install",
-   "開發": "webpack -d", 
-   "上線": "webpack -p", 
-   "服務器開發" : "webpack-dev-server"
+    "安裝套件": "npm install",
+    "開發": "webpack -d",
+    "上線": "webpack -p",
+    "服務器開發": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "gsap": "^3.11.4",
-    "jquery": "^3.6.3"
+    "jquery": "^3.6.3",
+    "vue": "^3.2.45"
   }
 }
