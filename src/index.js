@@ -20,6 +20,8 @@ gsap.to('.box' , {
 import './css/style.css'
 import './css/header.css'
 import './css/index.css'
+// sass style 引入
+import './sass/index.scss'
 
 
 

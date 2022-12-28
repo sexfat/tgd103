@@ -145,6 +145,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/css/index.css":
+/*!***************************!*\
+  !*** ./src/css/index.css ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/css/index.css?");
+
+/***/ }),
+
 /***/ "./src/css/style.css":
 /*!***************************!*\
   !*** ./src/css/style.css ***!
@@ -165,7 +177,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/header.css */ \"./src/css/header.css\");\n// jquery 套件引入\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('background-color' , 'yellow');\r\n\r\n\r\n//gsap  套件引入\r\n\r\n\r\ngsap__WEBPACK_IMPORTED_MODULE_1__[\"gsap\"].to('.box' , {\r\n   x : 400,\r\n   y: 400,\r\n   duration: 1,\r\n   rotation : 360,\r\n   repeat : 1,\r\n   scale : 4,\r\n   yoyo: true\r\n})\r\n\r\n// css style 引入\r\n\r\n\r\n\r\n\r\n\r\n// test\r\nfunction aa(x){\r\n  return  x * 10 \r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\nconsole.log(aa(20));\r\nconsole.log('finish');\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/header.css */ \"./src/css/header.css\");\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sass/index.scss */ \"./src/sass/index.scss\");\n// jquery 套件引入\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('background-color' , 'yellow');\r\n\r\n\r\n//gsap  套件引入\r\n\r\n\r\ngsap__WEBPACK_IMPORTED_MODULE_1__[\"gsap\"].to('.box' , {\r\n   x : 400,\r\n   y: 400,\r\n   duration: 1,\r\n   rotation : 360,\r\n   repeat : 1,\r\n   scale : 4,\r\n   yoyo: true\r\n})\r\n\r\n// css style 引入\r\n\r\n\r\n\r\n// sass style 引入\r\n\r\n\r\n\r\n\r\n// test\r\nfunction aa(x){\r\n  return  x * 10 \r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\nconsole.log(aa(20));\r\nconsole.log('finish');\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/sass/index.scss":
+/*!*****************************!*\
+  !*** ./src/sass/index.scss ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/sass/index.scss?");
 
 /***/ })
 
