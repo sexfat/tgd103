@@ -18,6 +18,7 @@ gsap.to('.box' , {
 
 // css style 引入
 import './css/style.css'
+import './css/header.css'
 
 
 
