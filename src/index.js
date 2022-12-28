@@ -1,9 +1,19 @@
 import $ from 'jquery';
-$('body').css('background-color' , 'green');
+$('body').css('background-color' , 'yellow');
 
 
 //gsap 
 import { gsap } from "gsap";
+
+gsap.to('.box' , {
+   x : 400,
+   y: 400,
+   duration: 1,
+   rotation : 360,
+   repeat : 1,
+   scale : 4,
+   yoyo: true
+})
 
 
 
