@@ -1,6 +1,6 @@
 // jquery 套件引入
 import $ from 'jquery';
-$('body').css('background-color' , 'yellow');
+$('body').css('background-color' , '#f20');
 
 
 //gsap  套件引入
@@ -11,9 +11,10 @@ gsap.to('.box' , {
    y: 400,
    duration: 1,
    rotation : 360,
-   repeat : 1,
-   scale : 4,
-   yoyo: true
+   repeat : -1,
+   scale : 10,
+   yoyo: true,
+   backgroundColor : '#000'
 })
 
 // css style 引入
