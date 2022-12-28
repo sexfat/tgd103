@@ -1,25 +1,8 @@
-.wrapper {
-  width: 1200px;
-  background-color: #ffebeb;
-  margin: auto; }
+.wrapper{width:1200px;background-color:#ffebeb;margin:auto}h1{font-size:30px;color:#000}.box{width:80px;height:80px;background-color:#ff00f7}
 
-h1 {
-  font-size: 30px;
-  color: black; }
+header{height:100px;background-color:#3509f8;width:100%}
 
-.box {
-  width: 80px;
-  height: 80px;
-  background-color: #ff00f7; }
+body{overflow:hidden}
 
-header {
-  height: 100px;
-  background-color: #3509f8;
-  width: 100%; }
-
-
-/*sass*/
-.index h1 {
-  color: aquamarine;
-  font-size: 50px; }
+.index h1{color:#ff7300;font-size:50px}
 
